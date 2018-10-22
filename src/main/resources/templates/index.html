@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <title>AppEvento</title>
+</head>
+<body>
+<h1>Lista de Eventos</h1>
+<h3><a href="/registerController">Cadastrar Evento</a></h3>
+    <div th:each="evento : ${eventoapp}">
+       <div class="row">
+           <p><span th:text="${evento.name}"></span></p>
+           <p><span th:text="${evento.local}"></span></p>
+           <p><span th:text="${evento.date}"></span></p>
+           <p><span th:text="${evento.hours}"></span></p>
+       </div>
+    </div>
+</body>
+</html>
